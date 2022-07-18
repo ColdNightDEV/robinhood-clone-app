@@ -1,5 +1,9 @@
 //import Components
 import Header from '../components/Header'
+import PortfolioChart from '../components/PortfolioChart'
+import BuyTokens from '../components/BuyTokens'
+import Notice from '../components/Notice'
+import Asset from '../components/Asset'
 
 // import Icons
 import { BiDotsHorizontalRounded } from 'react-icons/bi'
@@ -45,7 +49,7 @@ export default function Home() {
 					</div>
 					<div>
 						<div className={styles.chartContainer}>
-							{/* <portfolioChart /> */}
+							<PortfolioChart />
 						</div>
 					</div>
 					<div className={styles.buyingPowerContainer}>
@@ -58,10 +62,10 @@ export default function Home() {
 						<div className={styles.noticeContainer}>
 							<div className={styles.noticeTitle}>Send Funds</div>
 							<div className={styles.noticeMessage}>Transfer your funds here</div>
-							{/* <BuyTokens /> */}
+							<BuyTokens />
 						</div>
 					</div>
-					{/* <Notice /> */}
+					<Notice />
 				</div>
 				<div className={styles.rightMain}>
 					<div className={styles.rightMainItem}>
@@ -69,8 +73,11 @@ export default function Home() {
 
 						<BiDotsHorizontalRounded className={styles.moreOptions} />
 					</div>
-					{/* Map through the coins and for every coin make an asset component* /}
-					{/* <Asset/> */}
+					{/*Map through the assets you have*/}
+					<Asset coin={"BTC"} price = {0.12} />
+					<Asset coin={"ETH"} price = {0.2} />
+					<Asset coin={"SOL"} price = {-10.12} />
+					<Asset coin={"USDC"} price = {4.12} />
 					<div className={styles.rightMainItem}>
 						<div className={styles.ItemTitle}>Lists</div>
 						<AiOutlinePlus className={styles.moreOptions} />
